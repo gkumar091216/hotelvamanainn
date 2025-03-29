@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/croom1.jpg" alt="#"/></figure>
@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/croom3.jpg" alt="#"/></figure>
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/croom4.jpg" alt="#"/></figure>
@@ -42,7 +42,23 @@
                 </div>
             </div>
         </div>
-<div class="container">
+        <?php if ($pagename != 'home') {?>
+            <!-- Add More room here -->
+            <!-- <div class="col-md-4 col-sm-6 room-content">
+                <div id="serv_hover"  class="room">
+                    <div class="room_img">
+                    <figure><img src="images/croom4.jpg" alt="#"/></figure>
+                    </div>
+                    <div class="bed_room">
+                    <h3>Family Room</h3>
+                    <p>This is the ideal solution to have your children or large family members with you in complete comfort and style. The Family Room consists of Three Beds and two toilets.</p>
+                    </div>
+                </div>
+            </div> -->
+        <?php }?>
+    </div>
+</div>
+<div class="container luxury-rooms">
     <div class="row">
         <div class="col-md-12">
             <div class="titlepage">
@@ -51,8 +67,8 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4 col-sm-6">
+    <div class="row items">
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/ekantebliss.jpg" alt="ekante-bliss"/></figure>
@@ -62,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/fortunegrandridge.jpg" alt="fortune-grand-ridge"/></figure>
@@ -72,7 +88,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/goldentulip.jpg" alt="golden-tulip"/></figure>
@@ -82,7 +98,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
+        <?php if ($pagename != 'home') {?>
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/marasasarovarpremiere.jpg" alt="marasasarovar-premiere"/></figure>
@@ -92,7 +109,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/paiviceroyhotel.jpg" alt="pai-viceroy-hotel"/></figure>
@@ -101,8 +118,8 @@
                 <h3>Pai Viceroy Hotel</h3>
                 </div>
             </div>
-        </div>        
-        <div class="col-md-4 col-sm-6">
+        </div>
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/rajpark.jpg" alt="raj-park"/></figure>
@@ -112,7 +129,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/starlitsuites.jpg" alt="starlit-suites"/></figure>
@@ -122,7 +139,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/hoteltaj.jpg" alt="hotel-taj"/></figure>
@@ -132,7 +149,7 @@
                 </div>
             </div>
         </div>
-    <!-- <div class="col-md-4 col-sm-6">
+    <!-- <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/room4.jpg" alt="#"/></figure>
@@ -143,7 +160,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/room5.jpg" alt="#"/></figure>
@@ -154,7 +171,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-4 col-sm-6 room-content">
             <div id="serv_hover"  class="room">
                 <div class="room_img">
                 <figure><img src="images/room6.jpg" alt="#"/></figure>
@@ -165,5 +182,6 @@
                 </div>
             </div>
         </div> -->
+        <?php }?>
     </div>
 </div>

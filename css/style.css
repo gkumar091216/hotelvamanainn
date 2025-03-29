@@ -932,6 +932,14 @@ footer a {
 }
 
 /*rooms page*/
+.luxury-rooms .items{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.luxury-rooms .items .room-content{
+    margin-bottom: 30px;
+}
 .bg-set-col {
     background: rgba(0, 0, 0, 0.25);
     padding: 50px 0;
@@ -1469,7 +1477,7 @@ footer a {
 .our_room .room {
     text-align: center;
     background-color: #fff;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     transition: ease-in all 0.5s;
 }
 
