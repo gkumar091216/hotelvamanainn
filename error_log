@@ -1,0 +1,1 @@
+[22-Feb-2025 10:33:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/mumbayxc/public_html/hotelvamanainn.com/send-mail.php:1) in /home3/mumbayxc/public_html/hotelvamanainn.com/send-mail.php on line 74
