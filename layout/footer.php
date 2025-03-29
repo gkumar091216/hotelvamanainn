@@ -71,7 +71,16 @@
 
         </div>
     </footer>
-
+    <!--back to top--->
+    <a href="https://api.whatsapp.com/send?phone=919441581777&text=Hi, I am interested in knowing more about your tour  packages. Please call back. Thanks" class="whats-up" id="whats-up">
+        <div class="whatsup-layout">
+            <div><i aria-hidden="true" class="fa fa-whatsapp fa-lg"></i></div>
+            <div>
+                <h6>Whatsapp</h6>
+                <span>Click to Chat</span>
+            </div>
+        </div>
+    </a>
     <!--back to top--->
     <a style="display: none;" href="javascript:void(0);" class="scrollTop back-to-top" id="back-to-top">
         <span><i aria-hidden="true" class="fa fa-angle-up fa-lg"></i></span>

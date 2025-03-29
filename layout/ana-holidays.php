@@ -4,7 +4,7 @@
             <div class="titlepage">
                 <h2>Ana Holidays</h2>
                 <p>ANA HOLIDAYS - Best Travel Agencies in Tirupati. Are you planning your holiday vacation, honeymoon trip, corporate & leisure travel, devotional trip and Tirupati balaji darshan, Ana Holidays is one of the best and most reasonably priced tour operators in Tirupati. We provide a variety of Tirupati - Tirumala tour packages, that give you the choice to select the locations, choice of vechicle and the package price range that work best for you. We offer hassle-free travel, priority temple access, and expert guidance to make your Tirupati balaji darshan. Additionally, we offer a pickup and drop-off service from any location in the city to the Tirupati Temple.</p>
-                    <p></p>Choose A Package and Just give us a call : +91 - 9393622333, we'll be happy to assist you.</p>
+                    <p>Choose A Package and Just give us a call : +91 - 9393622333, we'll be happy to assist you.</p>
             </div>
         </div>
     </div>
