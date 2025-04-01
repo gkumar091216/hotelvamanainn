@@ -65,7 +65,7 @@
                                 <li><a data-hover="OUR ROOMS" href="<?php echo $base_url . 'our-rooms'; ?>" class="<?php if ($pagename == 'rooms') {echo 'active';}?>"><span>OUR ROOMS</span></a></li>
                                 <li><a data-hover="ANA HOLIDAYS" href="<?php echo $base_url . 'ana-holidays'; ?>" class="<?php if ($pagename == 'travels') {echo 'active';}?>"><span>ANA HOLIDAYS</span></a></li>
                                 <li><a data-hover="Gallery"  href="<?php echo $base_url . 'gallery'; ?>" class="<?php if ($pagename == 'gallery') {echo 'active';}?>"><span>GALLERY</span></a></li>
-                                 <li><a data-hover="BOOK A ROOM" href="<?php echo $base_url . 'contact-us'; ?>"  class="active<?php if ($pagename == 'contactus') {echo 'active';}?>"><span>BOOK A ROOM</span></a></li>
+                                 <li><a data-hover="BOOK A ROOM" href="<?php echo $base_url . 'contact-us'; ?>"  class="active <?php if ($pagename == 'contactus') {echo 'active';}?>"><span>BOOK A ROOM</span></a></li>
                             </ul>
                         </div>
                     </nav>
