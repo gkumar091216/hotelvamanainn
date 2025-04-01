@@ -1,5 +1,9 @@
 <?php
     $pagename = 'contactus';
+    use PHPMailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\PHPMailer;
+    require 'vendor/autoload.php'; // If installed via Composer
+                                   // // require 'PHPMailer/src/PHPMailer.php'; // If manually uploaded
 ?>
 <?php
     // ini_set( 'display_errors', 1 );
@@ -42,62 +46,99 @@ include './layout/layout.php'; ?>
                         $to = 'anahotels.in@gmail.com';
 
                         // Subject
-                        $subject = 'Contact details from Hotelvamanainn website';
+                        $subject = 'Enquiry for Hotel Vamana inn';
 
                         // Message
                         $message = '
-        <html>
-        <head>
-          <title>Contact details from Hotelvamanainn website</title>
-        </head>
-        <body>
-        <h1>Contact details from Hotelvamanainn website</h1>
-          <table>
-            <tr>
-              <td>Name</td><td> : </td><td> ' . $Name . '</td>
-            </tr>
-            <tr>
-              <td>Phone No</td><td> : </td><td> ' . $Phoneno . '</td>
-            </tr>
-            <tr>
-              <td>Email</td><td> : </td><td> ' . $Email . '</td>
-            </tr>';
+                        <html>
+                        <head>
+                        <title>Enquiry for Hotel Vamana inn</title>
+                        </head>
+                        <body>
+                        <h1>Enquiry for Hotel Vamana inn</h1>
+                        <table>
+                            <tr>
+                            <td>Name</td><td> : </td><td> ' . $Name . '</td>
+                            </tr>
+                            <tr>
+                            <td>Phone No</td><td> : </td><td> ' . $Phoneno . '</td>
+                            </tr>
+                            <tr>
+                            <td>Email</td><td> : </td><td> ' . $Email . '</td>
+                            </tr>';
                         if ($Subject) {
                             $message = $message . '
-            <tr>
-              <td>Subject</td><td> : </td><td> ' . $Subject . '</td>
-            </tr>';
+                            <tr>
+                            <td>Subject</td><td> : </td><td> ' . $Subject . '</td>
+                            </tr>';
                         }
                         if ($Message) {
                             $message = $message . '
-            <tr>
-              <td>Message</td><td> : </td><td> ' . $Message . '</td>
-            </tr>';
+                            <tr>
+                            <td>Message</td><td> : </td><td> ' . $Message . '</td>
+                            </tr>';
                         }
                         $message = $message . '
-          </table>
-        </body>
-        </html>
-        ';
+                        </table>
+                        </body>
+                        </html>
+                        ';
 
-                        // To send HTML mail, the Content-type header must be set
-                        $headers[] = 'MIME-Version: 1.0';
-                        $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-                        $headers[] = 'From: Hotelvamanainn Website <anahotels.in@gmail.com>';
-                        // $headers[] = 'Cc: gkumarswamy16@gmail.com';
-                        // $headers[] = 'Bcc: birthdaycheck@example.com';
+                        // echo 'send m...99';
+                        try {
+                            $mail = new PHPMailer(true);
 
-                        // Mail it
-                        mail($to, $subject, $message, implode("\r\n", $headers));
+                            $mail->isSMTP();
+                            $mail->Host        = 'smtp.gmail.com'; // Use your SMTP server
+                            $mail->SMTPAuth    = true;
+                            $mail->Username    = 'petterjohnm@gmail.com';
+                            $mail->Password    = 'ynqu sinw axvi gjux';
+                            $mail->SMTPSecure  = PHPMailer::ENCRYPTION_STARTTLS;
+                            $mail->Port        = 587;
+                            $mail->SMTPDebug   = 0;      // Debug level (0 = off, 1 = client, 2 = client/server)
+                            $mail->Debugoutput = 'html'; // Output format
+                            $mail->setFrom($Email, $Name);
+                            $mail->addAddress($to);
 
-                    ?>
-                <div class="clearfix position-relative text-center ">
-                    <div class="custom-alert alert col-xs-offset-1 col-xs-10 col-md-6 col-md-offset-3 mt-3 alert-success mx-auto" role="alert">
-                        <h3>Thank you for contacting us.</h3>
-                        <p>We have received your enquiry and will respond to you within 24 hours.  For urgent enquiries please call us on one of the telephone numbers below.</p>
-                    </div>
-                </div>
-            <?php }else {
+                            $mail->isHTML(true);
+                            $mail->Subject = $subject;
+                            $mail->Body    = $message;
+
+                            $mail->send();
+                            // echo 'Email has been sent successfully!';
+                        ?>
+                            <div class="clearfix position-relative text-center ">
+                            <div class="custom-alert alert col-xs-offset-1 col-xs-10 col-md-6 col-md-offset-3 mt-3 alert-success mx-auto" role="alert">
+                                <h3>Thank you for contacting us.</h3>
+                                <p>We have received your enquiry and will respond to you within 24 hours.  For urgent enquiries please call us on one of the telephone numbers below.</p>
+                            </div>
+                        </div>
+                        <?php
+                            } catch (Exception $e) {
+                                        // echo "Mailer Error: {$mail->ErrorInfo}";
+                                    ?>
+                            <div class="clearfix position-relative text-center ">
+                                <div class="custom-alert alert col-xs-offset-1 col-xs-10 col-md-6 col-md-offset-3 mt-3 alert-error mx-auto" role="alert">
+                                    <h3>Thank you for contacting us.</h3>
+                                    <p>please try after sometime</p>
+                                </div>
+                            </div>
+                            <?php
+                                }
+                                        // Old code
+                                        // // To send HTML mail, the Content-type header must be set
+                                        // $headers[] = 'MIME-Version: 1.0';
+                                        // $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+                                        // $headers[] = 'From: '.$Name.' <'.$Email.'>';
+                                        // // $headers[] = 'Cc: gkumarswamy16@gmail.com';
+                                        // // $headers[] = 'Bcc: birthdaycheck@example.com';
+
+                                        // // Mail it
+                                        // mail($to, $subject, $message, implode("\r\n", $headers));
+
+                                    ?>
+
+            <?php } else {
                         // echo $_POST['Name'].'-'.$_POST['Phoneno'].'-'.$_POST['Email'].'-'.$_POST['Subject'].'-'.$_POST['Message'];
                         $Name    = $_POST['Name'];
                         $Phoneno = $_POST['Phoneno'];
@@ -109,63 +150,97 @@ include './layout/layout.php'; ?>
                         $to = 'anaholidays@gmail.com';
 
                         // Subject
-                        $subject = 'Contact details from ANA Holidays website';
+                        $subject = 'Enquiry for Ana Holidays';
 
                         // Message
                         $message = '
-        <html>
-        <head>
-          <title>Contact details from ANA Holidays website</title>
-        </head>
-        <body>
-        <h1>Contact details from ANA Holidays website</h1>
-          <table>
-            <tr>
-              <td>Name</td><td> : </td><td> ' . $Name . '</td>
-            </tr>
-            <tr>
-              <td>Phone No</td><td> : </td><td> ' . $Phoneno . '</td>
-            </tr>
-            <tr>
-              <td>Email</td><td> : </td><td> ' . $Email . '</td>
-            </tr>';
+                        <html>
+                        <head>
+                        <title>Enquiry for Ana Holidays</title>
+                        </head>
+                        <body>
+                        <h1>Enquiry for Ana Holidays</h1>
+                        <table>
+                            <tr>
+                            <td>Name</td><td> : </td><td> ' . $Name . '</td>
+                            </tr>
+                            <tr>
+                            <td>Phone No</td><td> : </td><td> ' . $Phoneno . '</td>
+                            </tr>
+                            <tr>
+                            <td>Email</td><td> : </td><td> ' . $Email . '</td>
+                            </tr>';
                         if ($Subject) {
                             $message = $message . '
-            <tr>
-              <td>Subject</td><td> : </td><td> ' . $Subject . '</td>
-            </tr>';
+                            <tr>
+                            <td>Subject</td><td> : </td><td> ' . $Subject . '</td>
+                            </tr>';
                         }
                         if ($Message) {
                             $message = $message . '
-            <tr>
-              <td>Message</td><td> : </td><td> ' . $Message . '</td>
-            </tr>';
+                            <tr>
+                            <td>Message</td><td> : </td><td> ' . $Message . '</td>
+                            </tr>';
                         }
                         $message = $message . '
-          </table>
-        </body>
-        </html>
-        ';
+                        </table>
+                        </body>
+                        </html>
+                        ';
+                        try {
+                            $mail = new PHPMailer(true);
 
-                        // To send HTML mail, the Content-type header must be set
-                        $headers[] = 'MIME-Version: 1.0';
-                        $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-                        $headers[] = 'From: ANA Holidays Website <anaholidays@gmail.com>';
-                        // $headers[] = 'Cc: gkumarswamy16@gmail.com';
-                        // $headers[] = 'Bcc: birthdaycheck@example.com';
+                            $mail->isSMTP();
+                            $mail->Host        = 'smtp.gmail.com'; // Use your SMTP server
+                            $mail->SMTPAuth    = true;
+                            $mail->Username    = 'petterjohnm@gmail.com';
+                            $mail->Password    = 'ynqu sinw axvi gjux';
+                            $mail->SMTPSecure  = PHPMailer::ENCRYPTION_STARTTLS;
+                            $mail->Port        = 587;
+                            $mail->SMTPDebug   = 0;      // Debug level (0 = off, 1 = client, 2 = client/server)
+                            $mail->Debugoutput = 'html'; // Output format
+                            $mail->setFrom($Email, $Name);
+                            $mail->addAddress($to);
 
-                        // Mail it
-                        mail($to, $subject, $message, implode("\r\n", $headers));
+                            $mail->isHTML(true);
+                            $mail->Subject = $subject;
+                            $mail->Body    = $message;
 
-                    ?>
-                <div class="clearfix position-relative text-center ">
-                    <div class="custom-alert alert col-xs-offset-1 col-xs-10 col-md-6 col-md-offset-3 mt-3 alert-success mx-auto" role="alert">
-                        <h3>Thank you for contacting us.</h3>
-                        <p>We have received your enquiry and will respond to you within 24 hours.  For urgent enquiries please call us on one of the telephone numbers below.</p>
-                    </div>
-                </div>
-            <?php }
-            }?>
+                            $mail->send();
+                            // echo 'Email has been sent successfully!';
+                        ?>
+                            <div class="clearfix position-relative text-center ">
+                            <div class="custom-alert alert col-xs-offset-1 col-xs-10 col-md-6 col-md-offset-3 mt-3 alert-success mx-auto" role="alert">
+                                <h3>Thank you for contacting us.</h3>
+                                <p>We have received your enquiry and will respond to you within 24 hours.  For urgent enquiries please call us on one of the telephone numbers below.</p>
+                            </div>
+                        </div>
+                        <?php
+                            } catch (Exception $e) {
+                                        // echo "Mailer Error: {$mail->ErrorInfo}";
+                                    ?>
+                            <div class="clearfix position-relative text-center ">
+                                <div class="custom-alert alert col-xs-offset-1 col-xs-10 col-md-6 col-md-offset-3 mt-3 alert-error mx-auto" role="alert">
+                                    <h3>Thank you for contacting us.</h3>
+                                    <p>please try after sometime</p>
+                                </div>
+                            </div>
+                            <?php
+                                }
+                                        // Old code
+                                        // // To send HTML mail, the Content-type header must be set
+                                        // $headers[] = 'MIME-Version: 1.0';
+                                        // $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+                                        // $headers[] = 'From: ' . $Name . ' <' . $Email . '>';
+                                        // // $headers[] = 'Cc: gkumarswamy16@gmail.com';
+                                        // // $headers[] = 'Bcc: birthdaycheck@example.com';
+
+                                        // // Mail it
+                                        // mail($to, $subject, $message, implode("\r\n", $headers));
+
+                                    ?>
+<?php }
+}?>
 
             <section class="contact-block">
                <div class="container">
@@ -203,7 +278,7 @@ include './layout/layout.php'; ?>
                     <div class="clearfix"></div>
                 </div>
             </section>
-            
+
             <section class="contact-block">
                <div class="container">
                     <div class="col-md-6 contact-left-block">
