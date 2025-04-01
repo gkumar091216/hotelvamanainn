@@ -11,7 +11,8 @@
                         </li>
                         <li>
                             <a href="tel:9441581777"><i class="fa fa-phone"></i> &nbsp;+91 - 94415 81777</a>
-                            &nbsp;&nbsp;<a>/ </a> &nbsp;&nbsp;
+                            <a class="hidden-xs">&nbsp;&nbsp;/&nbsp;&nbsp; </a>
+                            <div class="hidden-sm hidden-md hidden-lg" ></div>
                             <a href="tel:9393622333"> +91 - 93936 22333</a>
                         </li>
                     </ul>
@@ -64,7 +65,7 @@
                                 <li><a data-hover="OUR ROOMS" href="<?php echo $base_url . 'our-rooms'; ?>" class="<?php if ($pagename == 'rooms') {echo 'active';}?>"><span>OUR ROOMS</span></a></li>
                                 <li><a data-hover="ANA HOLIDAYS" href="<?php echo $base_url . 'ana-holidays'; ?>" class="<?php if ($pagename == 'travels') {echo 'active';}?>"><span>ANA HOLIDAYS</span></a></li>
                                 <li><a data-hover="Gallery"  href="<?php echo $base_url . 'gallery'; ?>" class="<?php if ($pagename == 'gallery') {echo 'active';}?>"><span>GALLERY</span></a></li>
-                                 <li><a data-hover="BOOK A ROOM" href="<?php echo $base_url . 'contact-us'; ?>"  class="active <?php if ($pagename == 'contactus') {echo 'active';}?>"><span>BOOK A ROOM</span></a></li>
+                                 <li><a data-hover="BOOK A ROOM" href="<?php echo $base_url . 'contact-us'; ?>"  class="active<?php if ($pagename == 'contactus') {echo 'active';}?>"><span>BOOK A ROOM</span></a></li>
                             </ul>
                         </div>
                     </nav>
