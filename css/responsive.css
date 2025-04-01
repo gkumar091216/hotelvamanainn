@@ -102,7 +102,7 @@ License URI: http://www.themevault.net/license/
         position: absolute;
         right: 0px;
         background: #fff;
-        z-index: 10;
+        z-index: 101;
         width: 200px;
         padding-bottom: 40px;
         height: calc(100vh - 134px);

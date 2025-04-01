@@ -72,10 +72,10 @@
         </div>
     </footer>
     <!--back to top--->
-    <a href="https://api.whatsapp.com/send?phone=919441581777&text=Hi, I am interested in knowing more about your tour  packages. Please call back. Thanks" class="whats-up" id="whats-up">
+    <a href="https://api.whatsapp.com/send?phone=919441581777&text=Hi, I am interested in knowing more about your tour  packages. Please call back. Thanks" target="_blank" class="whats-up" id="whats-up">
         <div class="whatsup-layout">
             <div><i aria-hidden="true" class="fa fa-whatsapp fa-lg"></i></div>
-            <div>
+            <div class="hidden-xs name">
                 <h6>Whatsapp</h6>
                 <span>Click to Chat</span>
             </div>
@@ -91,6 +91,19 @@
 
     <script src="<?php echo $base_url; ?>js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="<?php echo $base_url; ?>js/owl.carousel.min.js"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/67e8391a79e564190eaef18a/1inhhu4fe';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
     <script src="<?php echo $base_url; ?>js/custom.js" type="text/javascript"></script>
   </body>
 </html>

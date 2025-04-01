@@ -39,7 +39,7 @@ include './layout/layout.php'; ?>
                         $Message = $_POST['Message'];
                         // Multiple recipients
                         // $to = 'hr@techzobris.com,demo@gmail.com';
-                        $to = 'anahotels.in@gmail.com ';
+                        $to = 'anahotels.in@gmail.com';
 
                         // Subject
                         $subject = 'Contact details from Hotelvamanainn website';

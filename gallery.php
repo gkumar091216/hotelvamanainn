@@ -65,6 +65,21 @@ include './layout/layout.php'; ?>
                     <div class="grid-item percent20 gallery-image">
                         <a class="example-image-link img-responsive" href="images/gallery16-16.jpg" data-lightbox="example-1"><img src="images/gallery16.jpg" class="img-responsive" alt="gallery1"></a>
              </div>
+        </div>
+    </section>
+    <section class="gallery-videos-block">
+        <div class="container">
+             <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <iframe width="100%"  style="min-height: 310px;margin-bottom: 28px;" src="https://www.youtube.com/embed/3vzIbsaDidk?si=npNcvsFUzpxbIgCi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <iframe width="100%"   style="min-height: 310px;margin-bottom: 28px;"  src="https://www.youtube.com/embed/zh3S95rv9j4?si=hKxXMXI7mGLqcxjj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <iframe width="100%"    style="min-height: 310px;margin-bottom: 28px;"  src="https://www.youtube.com/embed/GehxDMGd00Y?si=sQ6gMguwp6ivDxoE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+             </div>
             </div>
         </div>
     </section>
