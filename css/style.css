@@ -1291,14 +1291,17 @@ footer a {
     font-family: "exotc350_dmbd_btdemi-bold";
     position: relative;
     display: inline-block;
+    background: #000000ab;
+    padding: 2px 8px;
+    border-radius: 2px;
 
 }
-.inner-wrapper h1::before {
+/* .inner-wrapper h1::before {
     content: "";
     box-shadow: 0 16px 81px 82px #000;
     width: 100%;
     display: block;
-}
+} */
 
 /*.inner-wrapper h1::after{*/
 /*    content:'';*/
