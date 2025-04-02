@@ -1290,7 +1290,14 @@ footer a {
 .inner-wrapper h1 {
     font-family: "exotc350_dmbd_btdemi-bold";
     position: relative;
+    display: inline-block;
 
+}
+.inner-wrapper h1::before {
+    content: "";
+    box-shadow: 0 16px 81px 82px #000;
+    width: 100%;
+    display: block;
 }
 
 /*.inner-wrapper h1::after{*/
@@ -1482,7 +1489,7 @@ footer a {
 
 /*---------------------------------------------------- */
 
-.resort-overview-block .side-A {
+.resort-overview-block .anaholiday-box {
     margin-bottom: 30px;
 }
 

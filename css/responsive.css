@@ -227,6 +227,9 @@ License URI: http://www.themevault.net/license/
     .overlay .info > i{
         font-size: 15px;
     }
+    .inner-wrapper h1::before {
+        box-shadow: 0 46px 81px 82px #000;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 767px) {

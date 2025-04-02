@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
+        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right anaholiday-box">
             <div class="side-A">
                 <div class="product-thumb">
                     <div class="image">
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="clear"></div>
-        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
+        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left anaholiday-box">
             <div class="side-A">
                 <div class="product-thumb">
                     <div class="image">
@@ -68,8 +68,8 @@
             </div>
         </div>
         <div class="clear"></div>
-        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
-            <div class="side-A">
+        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right anaholiday-box">
+            <div class="side-A hidden-xs">
                 <div class="product-desc-side">
                     <div class="content">
                         <h3><a>4 Nights / 5 Days</a></h3>
@@ -97,10 +97,30 @@
                     </div>
                 </div>
             </div>
+            <div class="side-A hidden-sm hidden-md hidden-lg">
+                <div class="product-desc-side">
+                    <div class="content">
+                        <h3><a>4 Nights / 5 Days</a></h3>
+                        <p><b>Coastal Karnataka Package</b></p>
+                        <p><span>Places Covered : </span></p>
+                        <ul>
+                            <li><span></span> Horanadu</li>
+                            <li><span></span> Shringeri</li>
+                            <li><span></span> Kolluru-Gokarna</li>
+                            <li><span></span> Murudeshwar</li>
+                            <li><span></span> Udupi</li>
+                            <li><span></span> Mangalore</li>
+                            <li><span></span> Dharmastala</li>
+                            <li><span></span> Kukke Subramanya</li>
+                        </ul>
+                    </div>
+                    <div class="links"><a href="<?php echo $base_url . 'contact-us'; ?>">Book Now</a></div>
+                    </div>
+            </div>
         </div>
         <div class="clear"></div>
-        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
-            <div class="side-A">
+        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left anaholiday-box">
+            <div class="side-A hidden-xs">
                 <div class="product-desc-side">
                     <div class="content">
                         <h3><a>5 Nights / 6 Days</a></h3>
@@ -129,11 +149,33 @@
                     </div>
                 </div>
             </div>
+            <div class="side-A hidden-sm hidden-md hidden-lg">
+                <div class="product-desc-side">
+                    <div class="content">
+                        <h3><a>5 Nights / 6 Days</a></h3>
+                        <p><b>Tirupati - Tamilnadu Package</b></p>
+                        <p><span>Places Covered : </span></p>
+                        <ul>
+                            <li><span></span> Tirupati</li>
+                            <li><span></span> Tirumala</li>
+                            <li><span></span> Kalahasti</li>
+                            <li><span></span> Local Temples</li>
+                            <li><span></span> Kanipakam</li>
+                            <li><span></span> Vellore Golden Temple</li>
+                            <li><span></span> Kanchipuram</li>
+                            <li><span></span> Mahabalipuram</li>
+                            <li><span></span> Pondichery</li>
+                            <li><span></span> Chennai</li>
+                        </ul>
+                    </div>
+                    <div class="links"><a href="<?php echo $base_url . 'contact-us'; ?>">Book Now</a></div>
+                </div>
+            </div>
         </div>
         <div class="clear"></div>
 
         <?php if ($pagename != 'home') {?>
-            <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
+            <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right anaholiday-box">
                 <div class="side-A">
                     <div class="product-thumb">
                         <div class="image">
@@ -167,7 +209,7 @@
                 </div>
             </div>
             <div class="clear"></div>
-            <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
+            <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left anaholiday-box">
                 <div class="side-A">
                     <div class="product-thumb">
                         <div class="image">
@@ -193,8 +235,8 @@
                 </div>
             </div>
             <div class="clear"></div>
-            <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
-                <div class="side-A">
+            <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right anaholiday-box">
+                <div class="side-A hidden-xs">
                     <div class="product-desc-side">
                         <div class="content">
                             <h3><a>4 Nights / 5 Days</a></h3>
@@ -223,10 +265,31 @@
                         </div>
                     </div>
                 </div>
+                <div class="side-A hidden-sm hidden-md hidden-lg">
+                    <div class="product-desc-side">
+                        <div class="content">
+                            <h3><a>4 Nights / 5 Days</a></h3>
+                            <p><b>Tirupati - Kanchipuram - Chennai Package</b></p>
+                            <p><span>Places Covered : </span></p>
+                            <ul>
+                                <li> <span></span> Tirupati </li>
+                                <li> <span></span> Tirumala </li>
+                                <li> <span></span> Kalahasti</li>
+                                <li> <span></span> Local Temples </li>
+                                <li> <span></span> Kanipakam </li>
+                                <li> <span></span> Vellore Golden Temple </li>
+                                <li> <span></span> Kanchipuram </li>
+                                <li> <span></span> Mahabalipuram </li>
+                                <li> <span></span> Chennai</li>
+                            </ul>
+                        </div>
+                        <div class="links"><a href="<?php echo $base_url . 'contact-us'; ?>">Book Now</a></div>
+                        </div>
+                </div>
             </div>
             <div class="clear"></div>
-            <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
-                <div class="side-A">
+            <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left anaholiday-box">
+                <div class="side-A hidden-xs">
                     <div class="product-desc-side">
                         <div class="content">
                             <h3><a>5 Nights / 6 Days</a></h3>
@@ -250,6 +313,25 @@
                         <div class="image">
                             <a class="arrow-left"><img src="images/category8.png" class="img-responsive" alt="imaga"></a>
                         </div>
+                    </div>
+                </div>
+                <div class="side-A hidden-sm hidden-md hidden-lg">
+                    <div class="product-desc-side">
+                        <div class="content">
+                            <h3><a>5 Nights / 6 Days</a></h3>
+                            <p><b>Tirupati - Hyderabad Package</b></p>
+                            <p><span>Places Covered : </span></p>
+                            <ul>
+                                <li><span></span> Tirupati</li>
+                                <li><span></span> Tirumala</li>
+                                <li><span></span> Kalahasti</li>
+                                <li><span></span> Local Temples</li>
+                                <li><span></span> Hyderabad City</li>
+                                <li><span></span> Srisailam</li>
+                                <li><span></span> Ramoji Filmcity</li>
+                            </ul>
+                        </div>
+                        <div class="links"><a href="<?php echo $base_url . 'contact-us'; ?>">Book Now</a></div>
                     </div>
                 </div>
             </div>
